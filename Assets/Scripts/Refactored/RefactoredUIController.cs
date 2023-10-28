@@ -14,8 +14,8 @@ public class RefactoredUIController : UIControllerBase
 
     private void Update()
     {
-        RefactoredGameController.Instance.OnArrowShot -= UpdateUIOnArrowShot;
-        RefactoredGameController.Instance.OnGameOver -= HandleGameOver;
+        RefactoredGameController.Instance.OnArrowShot += UpdateUIOnArrowShot;
+        RefactoredGameController.Instance.OnGameOver += HandleGameOver;
     }
 
     public void UpdateUIOnArrowShot()
