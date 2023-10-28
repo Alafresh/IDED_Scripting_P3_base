@@ -1,4 +1,4 @@
-# Readme - Refactored Player Controller
+# Readme - Refactored Target Shooting Game
 
 Este documento describe la funcionalidad de un código que implementa patrones de diseño Command y Singleton en el contexto de un juego Tiro Al Blanco desarrollado en Unity. También se explica cómo se comunica a través de eventos entre los diferentes componentes del juego.
 
@@ -60,6 +60,28 @@ El código también implementa conceptos clave de la programación orientada a o
 - **Polimorfismo**: Consiste en redefinir un metodo de una clase padre en una clase hija como podemos ver en el `Start` de la clase `RefactoredPlayerController` o en el metodo `ProcessShot` de la clase `RefactoredGameController` entre otros.
 
 Este código representa una mejora en la estructura y mantenibilidad de un juego Unity, al aplicar patrones de diseño y principios de OOP de manera efectiva.
+
+**Inconvenientes de usar el patrón State:**
+
+1. **Complejidad adicional**: Utilizar el patrón State significa que se debera crear diferentes "estados" para el juego, como esperar, disparar, mostrar dónde aterrizó la flecha, calcular la puntuación, etc. Esto puede hacer que el juego sea más complicado de lo necesario ya que es un prototipo simple.
+
+2. **Más tiempo de desarrollo**: Hacer un juego con el patrón State lleva más tiempo y esfuerzo. Necesitas pensar y escribir mucho más código.
+
+3. **Más clases y más trabajo**: Para cada estado y acción del juego, necesitare escribir más código, entonces tendre más clases y por ende mas cosas para gestionar.
+
+4. **Manejo complicado del flujo**: Con el patrón State, debes pensar mucho en cómo el juego pasa de un estado a otro, lo que puede ser un problema si solo estás haciendo un prototipo rápido.
+
+5. **No tengo experiencia**: No tengo experincia implementando este patron entonces tampoco me iba a poner a inventar. 
+
+**Estrategia de implementación si hubiera decidido usar el patrón State:**
+
+1. **Decidir los estados**: Identificar los diferentes estados que necesita mi juego, como esperar a que el jugador dispare, mostrar dónde aterrizó la flecha, calcular la puntuación, etc.
+
+2. **Hacer clases para los estados**: Crear diferentes "pedazos" de código para cada estado. Por ejemplo, una clase para "esperar" y otra para "mostrar el punto de aterrizaje".
+
+3. **Indicar cuándo cambiar**: Deberia programar en mi juego para que cambie de un estado a otro en el momento adecuado. Si el jugador dispara, debe pasar al estado de "mostrar dónde aterrizó la flecha".
+
+4. **Un solo trabajo**: Cada estado debe hacer su trabajo. Por ejemplo, cuando el juego está en el estado de "mostrar dónde aterrizó la flecha", debe mostrar eso en la pantalla.
 
 Target picture: https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/WA_80_cm_archery_target.svg/600px-WA_80_cm_archery_target.svg.png (retrieved on 22/10/2023)
 Wind direction arrow: https://www.pngwing.com/en/free-png-tuhcc/download (retrieved on 25/10/2023)
