@@ -61,7 +61,7 @@ El código también implementa conceptos clave de la programación orientada a o
 
 Este código representa una mejora en la estructura y mantenibilidad de un juego Unity, al aplicar patrones de diseño y principios de OOP de manera efectiva.
 
-**Inconvenientes de usar el patrón State:**
+## Inconvenientes de usar el patrón State
 
 1. **Complejidad adicional**: Utilizar el patrón State significa que se debera crear diferentes "estados" para el juego, como esperar, disparar, mostrar dónde aterrizó la flecha, calcular la puntuación, etc. Esto puede hacer que el juego sea más complicado de lo necesario ya que es un prototipo simple.
 
